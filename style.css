@@ -1,0 +1,485 @@
+/* ========================================= */
+/* 1. VARIÁVEIS E RESET                      */
+/* ========================================= */
+:root {
+  --bg-color: #0f172a;       /* Fundo da página (Slate 900) */
+  --card-bg: #1e293b;        /* Fundo dos cards (Slate 800) */
+  --primary: #38bdf8;        /* Azul claro destaque (Sky 400) */
+  --primary-hover: #7dd3fc;  /* Azul mais claro para hover */
+  --purple: #9333ea;         /* Roxo secundário */
+  --text-main: #ffffff;      /* Texto principal */
+  --text-muted: #cbd5f5;     /* Texto secundário */
+  --border-color: #334155;   /* Bordas sutis */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ========================================= */
+/* 2. LAYOUT GERAL E HEADER                  */
+/* ========================================= */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  background: #020617;
+  padding: 20px 0;
+  position: sticky; /* Opcional: mantém o menu no topo */
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+
+nav a {
+  color: var(--text-main);
+  margin-left: 20px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+main {
+  min-height: 80vh;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 80px 20px;
+  display: block;
+}
+
+section h2 {
+  margin-bottom: 30px;
+  color: var(--primary);
+  font-size: 2rem;
+}
+
+/* ========================================= */
+/* 3. SEÇÃO SOBRE (HERO)                     */
+/* ========================================= */
+.sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  text-align: left;
+  padding: 80px 20px;
+}
+
+.photo-wrapper {
+  width: 260px;
+  height: 260px;
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-photo {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--bg-color); 
+}
+
+.info h2 {
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: var(--text-main);
+}
+
+.cargo {
+  display: block;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.info p {
+  max-width: 400px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-main);
+  font-size: 14px;
+  transition: transform 0.3s ease; 
+}
+
+.social-item i {
+  font-size: 22px;
+  color: var(--primary);
+  min-width: 26px;
+  text-align: center;
+}
+
+.social-item span {
+  font-size: 14px;
+  color: #e2e8f0;
+  transition: color 0.3s;
+}
+
+.social-item:hover {
+  transform: translateX(5px); 
+}
+
+.social-item:hover span {
+  color: var(--primary);
+}
+
+/* ========================================= */
+/* 4. EXPERIÊNCIA E SKILLS                   */
+/* ========================================= */
+.experiencia-skills {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  padding: 30px;
+}
+
+/* Timeline */
+.timeline h2 { margin-bottom: 30px; }
+
+.timeline-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  border-left: 2px solid #444;
+}
+
+/* Bolinha da timeline */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.timeline-item .time {
+  font-size: 13px;
+  color: #aaa;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.timeline-item h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: var(--text-main);
+}
+
+/* Grid de Skills */
+.skills-area {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-card {
+  background: transparent;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ccc;
+  white-space: nowrap;
+  cursor: default;
+  transition: 0.25s;
+}
+
+.skill-card:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(56, 189, 248, 0.1);
+}
+/* ========================================= */
+/* LAYOUT PROJETOS (BENTO + DETAIL)          */
+/* ========================================= */
+
+/* Container Principal (2 Colunas) */
+.projects-container {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Coluna fixa na esq, resto na dir */
+    gap: 30px;
+    align-items: start;
+}
+
+/* --- COLUNA ESQUERDA: BENTO MENU (Ícones Flutuantes) --- */
+.bento-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 por linha fica mais equilibrado agora */
+    gap: 20px;
+    padding: 10px;
+}
+
+.bento-item {
+    background: transparent; /* Remove o fundo quadrado */
+    border: none;            /* Remove a borda quadrada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+    gap: 10px; /* Distância entre ícone e texto */
+}
+
+/* O Ícone (Onde acontece a mágica 3D) */
+.bento-item img {
+    width: 64px;  /* Um pouco maior para destaque */
+    height: 64px;
+    border-radius: 16px; /* Borda estilo Apple (Squircle) */
+    object-fit: cover;
+    
+    /* Efeito 3D Minimalista */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação "Bouncy" */
+    
+    /* Garante que a imagem não fique distorcida */
+    background-color: var(--card-bg); 
+}
+
+/* O Texto (Nome do App) */
+.bento-item span {
+    font-size: 11px;
+    color: #64748b; /* Cinza discreto */
+    font-weight: 500;
+    text-align: center;
+    transition: color 0.3s;
+    max-width: 80px; /* Evita que nomes longos quebrem o layout */
+    line-height: 1.2;
+}
+
+/* --- ESTADOS DE INTERAÇÃO --- */
+
+/* Hover (Ao passar o mouse) */
+.bento-item:hover img {
+    transform: translateY(-6px) scale(1.05); /* Sobe e aumenta levemente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra cresce (parece que levantou) */
+}
+
+.bento-item:hover span {
+    color: var(--text-main); 
+}
+
+/* Active (Item selecionado) */
+.bento-item.active img {
+    box-shadow: 0 0 0 2px var(--primary), 0 10px 25px rgba(56, 189, 248, 0.4);
+    transform: translateY(-3px);
+}
+
+.bento-item.active span {
+    color: var(--primary); 
+    font-weight: 700;
+}
+
+
+/* --- COLUNA DIREITA: DISPLAY AREA --- */
+.project-display {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 30px;
+    min-height: 400px;
+    position: relative;
+    /* Animação suave ao trocar */
+    transition: opacity 0.3s ease;
+}
+
+.project-display.fade-out {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Header do Display */
+.display-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.display-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.header-info h3 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+/* Espaçamento das Tags no Painel de Detalhes */
+.header-info .tags {
+    display: flex;       
+    gap: 10px;          
+    flex-wrap: wrap;   
+    margin-top: 8px;    
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 20px 0;
+}
+
+/* Corpo do Display */
+.info-block {
+    margin-bottom: 25px;
+}
+
+.info-block h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.info-block p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* GALERIA DE TELAS */
+.display-gallery {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    overflow-x: auto;      
+    padding-bottom: 15px;  
+    padding-top: 15px;
+    
+    /* Scroll suave */
+    scroll-behavior: smooth;
+    
+    /* Esconder scrollbar no Chrome/Safari (opcional, fica mais limpo) */
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+}
+
+/* A IMAGEM DO PRINT (Celular) */
+.app-screen {
+    height: 180px;         
+    width: auto;            
+    border-radius: 14px;    
+    border: 2px solid #334155; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;        
+}
+
+.app-screen:hover {
+    transform: scale(1.02); 
+    border-color: var(--primary);
+}
+
+/* Botões do Display */
+.display-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 850px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Empilha tudo */
+    }
+
+    .bento-menu {
+        grid-template-columns: repeat(3, 1fr); /* 3 ícones por linha no mobile */
+        margin-bottom: 20px;
+    }
+}
+
+/* ========================================= */
+/* 6. RODAPÉ                                 */
+/* ========================================= */
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #64748b;
+  border-top: 1px solid var(--border-color);
+  margin-top: 60px;
+}
+
+/* ========================================= */
+/* 7. RESPONSIVIDADE (MOBILE)                */
+/* ========================================= */
+@media (max-width: 900px) {
+  .experiencia-skills {
+    grid-template-columns: 1fr;
+    padding: 30px 5%;
+  }
+  
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .info p {
+    margin: 0 auto 20px auto;
+  }
+  
+  .social {
+    align-items: center; /* Centraliza ícones no mobile */
+  }
+}

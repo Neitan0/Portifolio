@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>Portfólio - Natanael Nogueira Fernandes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CORPO -->
+    <main>
+
+        <!-- SEÇÃO SOBRE -->
+        <section id="sobre" class="sectio sobre">
+
+            <!-- FOTO -->
+            <div class="photo-wrapper">
+                <img src="assets/imagens/fotoProfiossinal.png" alt="Minha foto" class="profile-photo">
+            </div>
+
+            <!-- INFORMAÇÕES -->
+            <div class="info">
+                <h2>Natanael Nogueira</h2>
+                <span class="cargo">Desenvolvedor</span>
+
+                <p>
+                    Alumni da Apple developer academy.
+                </p>
+                <p>
+                    Estudante de ciência da computação na Universidade Federal do Ceará.
+                </p>
+
+                <!-- CONTATOS -->
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/natanael-nogueira-" target="_blank" class="social-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/Neitann0" target="_blank" class="social-item">
+                        <i class="fab fa-instagram"></i>
+                        <span>@Neitan0</span>
+                    </a>
+                    <a href="mailto:natan.nael1258@gmail.com" class="social-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>natan.nael1258@gmail.com</span>
+                    </a>
+                    <a href="https://wa.me/5585988763916" class="social-item" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>(85) 98876-3916</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- SEÇÃO EXPERIÊNCIA + SKILLS -->
+        <section id="experiencia-skills" class="experiencia-skills">
+
+            <!-- ===== COLUNA ESQUERDA | EXPERIÊNCIAS ===== -->
+            <div class="timeline">
+
+                <h2>Experiência</h2>
+
+                <div class="timeline-item">
+                    <span class="time">2024 - 2025</span>
+                    <h3>Apple Developer Academy</h3>
+                    <p>Desenvolvimento de apps iOS com Swift, construção do zero desde o planejamento a postagem na AppStore, foco em UX e produto.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="time">2023 - 2024</span>
+                    <h3>Nucleo de Desenvolvimento de Software</h3>
+                    <p>Criação de aplicativos iOS sob demanda.</p>
+                </div>
+
+            </div>
+
+            <!-- ===== COLUNA DIREITA | SKILLS ===== -->
+            <div class="skills-area">
+
+                <!-- HARD SKILLS -->
+                <div class="skills-box">
+                    <h2>Hard Skills</h2>
+
+                    <div class="skills-grid">
+                        <div class="skill-card">Swift</div>
+                        <div class="skill-card">SwiftUI</div>
+                        <div class="skill-card">UIKit</div>
+                        <div class="skill-card">iOS</div>
+                        <div class="skill-card">JavaScript</div>
+                        <div class="skill-card">HTML</div>
+                        <div class="skill-card">CSS</div>
+                        <div class="skill-card">Git</div>
+                        <div class="skill-card">Flutter</div>
+                        <div class="skill-card">Firebase</div>
+                    </div>
+                </div>
+
+                <!-- SOFT SKILLS -->
+                <div class="skills-box">
+                    <h2>Soft Skills</h2>
+
+                    <div class="skills-grid soft">
+                        <div class="skill-card">Comunicação</div>
+                        <div class="skill-card">Trabalho em equipe</div>
+                        <div class="skill-card">Paciência</div>
+                        <div class="skill-card">Organização</div>
+                        <div class="skill-card">Proatividade</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SEÇÃO PROJETOS -->
+        <section id="projetos" class="section projetos">
+            <h2>Projetos</h2>
+
+            <div class="projects-container">
+
+                <div class="bento-menu">
+                    <button class="bento-item active" onclick="updateProject(0)">
+                        <img src="assets/imagens/icons/skedouIcon.svg" alt="Skedou">
+                        <span>Skedou</span>
+                    </button>
+
+                    <button class="bento-item" onclick="updateProject(1)">
+                        <img src="assets/imagens/icons/underlinedIcon.svg" alt="Underlined">
+                        <span>Underlined</span>
+                    </button>
+
+                    <button class="bento-item" onclick="updateProject(2)">
+                        <img src="assets/imagens/icons/nutricamIcon.svg" alt="Nutricam">
+                        <span>Nutricam</span>
+                    </button>
+
+                    <button class="bento-item" onclick="updateProject(3)">
+                        <img src="assets/imagens/icons/SpaceTimeIcon.svg" alt="Spacetime">
+                        <span>Spacetime</span>
+                    </button>
+
+                    <button class="bento-item" onclick="updateProject(4)">
+                        <img src="assets/imagens/icons/LNEIcon.jpeg" alt="LNE">
+                        <span>LNE</span>
+                    </button>
+
+                    <button class="bento-item" onclick="updateProject(5)">
+                        <img src="assets/imagens/icons/SaporoIcon.svg" alt="Saporo">
+                        <span>Saporo</span>
+                    </button>
+
+                    <button class="bento-item" onclick="updateProject(6)">
+                        <img src="assets/imagens/icons/marples3d.png" alt="Marples">
+                        <span>Marples</span>
+                    </button>
+
+                    <button class="bento-item" onclick="updateProject(7)">
+                        <img src="assets/imagens/icons/logo-bora.svg" alt="Bora!">
+                        <span>Bora!</span>
+                    </button>
+
+                    <button class="bento-item" onclick="updateProject(8)">
+                        <img src="assets/imagens/icons/tutoreasy.png" alt="TutorEasy">
+                        <span>TutorEasy</span>
+                    </button>
+                </div>
+
+                <div class="project-display" id="project-display">
+
+                    <div class="display-header">
+                        <img src="assets/imagens/icons/skedouIcon.svg" id="p-icon" class="display-icon">
+                        <div class="header-info">
+                            <h3 id="p-title">Skedou</h3>
+                            <div class="tags" id="p-tags">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="display-body">
+                        <div class="info-block">
+                            <h4>Sobre o projeto</h4>
+                            <p id="p-desc">Descrição carregando...</p>
+                        </div>
+
+                        <div class="info-block">
+                            <h4>Maior Desafio</h4>
+                            <p id="p-challenge">Desafio carregando...</p>
+                        </div>
+                    </div>
+
+                    <div class="display-gallery">
+                        <div class="screen-placeholder">Tela 1</div>
+                        <div class="screen-placeholder">Tela 2</div>
+                        <div class="screen-placeholder">Tela 3</div>
+                    </div>
+
+                    <div class="display-actions">
+                        <a href="#" id="btn-code" class="btn-action" target="_blank">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="#" id="btn-link" class="btn-action primary" target="_blank">
+                            <i class="fab fa-app-store"></i> Baixar
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SEÇÃO CONTATO -->
+        <!-- <section id="contato" class="section">
+            <h2>Contato</h2>
+            <p>Email: seuemail@gmail.com</p>
+            <p>LinkedIn: linkedin.com/in/seuperfil</p>
+        </section> -->
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>© 2025 - Natanael Nogueira. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
