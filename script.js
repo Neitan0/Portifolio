@@ -1,32 +1,32 @@
 console.log("Portfólio carregado com sucesso!");
 
-
-// DADOS DOS PROJETOS
+// 1. DADOS DOS PROJETOS 
 const projectsData = [
     {
         id: 0,
         title: "Skedou",
         icon: "assets/imagens/icons/skedouIcon.svg",
-        desc: "Transforme a forma como você gerencia seus agendamentos. Com o Skedou, você economiza tempo: agenda serviços, acompanha seus ganhos e gerencia tudo em um só lugar. O Skedou é o app ideal para profissionais independentes de cuidados com pets, como tosadores, treinadores, passeadores de cães e pet sitters, que desejam se manter organizados e criar conexões mais fortes com seus clientes.",
-        challenge: "Organização das camadas de dados devido à escalabilidade, Foi necessário reavaliar estratégias de arquitetura, onde tivemos que estruturar melhor o swiftData para separar sua logica da View, garantindo melhor facilidade de criação de nova features, e tambem na comunicação de swuiftUI com UIKit.",
-        tags: ["iOS", "Swift", "SwiftData", "SwiftUI", "CloudKit", "UIKit", "PDFKit", "Clear Architecture(adaptado)"],
+        desc: "Transforme a forma como você gerencia seus agendamentos. Com o Skedou, você economiza tempo: agenda serviços, acompanha seus ganhos e gerencia tudo em um só lugar. O Skedou é o app ideal para profissionais independentes de cuidados com pets.",
+        challenge: "Organização das camadas de dados devido à escalabilidade. Foi necessário reavaliar estratégias de arquitetura, onde tivemos que estruturar melhor o SwiftData para separar sua lógica da View.",
+        tags: ["iOS", "Swift", "SwiftData", "SwiftUI", "CloudKit", "UIKit"],
         codeLink: "",
         storeLink: "https://apps.apple.com/br/app/skedou/id6754465958?l=en-GBSkedou",
         screenshots: [
-            "assets/imagens/imageApps/skedou/skedoul1.svg",
-            "assets/imagens/imageApps/skedou/skedoul2.svg",
-            "assets/imagens/imageApps/skedou/skedoul3.svg",
-            "assets/imagens/imageApps/skedou/skedoul4.svg",
-            "assets/imagens/imageApps/skedou/skedoul5.svg"
+            "assets/imagens/imageApps/skedou/skedou1.svg",
+            "assets/imagens/imageApps/skedou/skedou2.svg",
+            "assets/imagens/imageApps/skedou/skedou3.svg",
+            "assets/imagens/imageApps/skedou/skedou4.svg",
+            "assets/imagens/imageApps/skedou/skedou5.svg",
+            "assets/imagens/imageApps/skedou/skedou6.svg"
         ]
     },
     {
         id: 1,
         title: "Underlined",
         icon: "assets/imagens/icons/underlinedIcon.svg",
-        desc: "Underlined é um jogo de investigação que desafia sua lógica, memória e atenção aos detalhes. Assuma o papel de um detetive e utilize seu raciocínio para solucionar casos complexos com base em conexões contextuais, não em semelhanças visuais. A cada partida, você é apresentado a uma seleção de cartas contendo pistas — locais, suspeitos, métodos e motivações. Sua missão é encontrar as combinações corretas por contexto para responder às perguntas centrais de cada caso: Onde ocorreu? Como foi feito? Quem é o responsável? Qual o motivo?",
-        challenge: "Sendo um jogo todo em UIKit e SpriteKit o maior desafio foi o desempenho e ciclo de vida do app, tivemos problemas com thread que travavam a UI e causavam travamento e ate crashes, tivemos que rever o codigo para desocupar a main thread apenas com processos importantes no momento.",
-        tags: ["iOS", "SpriteKit", "UIKit","CloudKit", "MVVM(adaptado)", "CoreData"],
+        desc: "Underlined é um jogo de investigação que desafia sua lógica, memória e atenção aos detalhes. Assuma o papel de um detetive e utilize seu raciocínio para solucionar casos complexos com base em conexões contextuais.",
+        challenge: "Sendo um jogo todo em UIKit e SpriteKit o maior desafio foi o desempenho e ciclo de vida do app, tivemos problemas com threads que travavam a UI.",
+        tags: ["iOS", "SpriteKit", "UIKit", "CloudKit", "MVVM"],
         codeLink: "#",
         storeLink: "https://apps.apple.com/br/app/underlined/id6745526553?l=en-GBUnderlined",
         screenshots: [
@@ -42,11 +42,11 @@ const projectsData = [
         id: 2,
         title: "Nutricam",
         icon: "assets/imagens/icons/nutricamIcon.svg",
-        desc: "Transforme tabelas difíceis de ler em informações claras e acessíveis com o NutriCam! Basta apontar a câmera para uma tabela nutricional e deixar o app fazer o resto. Agora, com suporte aprimorado para acessibilidade, o NutriCam garante que qualquer pessoa possa interpretar rótulos com facilidade.",
-        challenge: "Implementar o coreML e treinar um modelo, a parte de integração com a camera e a saida de dados foi meio conturbada, o maior desafio foi a saida de dados do modelo, para que seja com os minimos erros possiveis, tivemos mexer com cordenadas dos reconhecimentos para garantir melhor captura.",
-        tags: ["CoreML", "VisionKit", "SwiftUI", "UIKit", "iOS", "Accessibility", "AVFoundation"],
+        desc: "Transforme tabelas difíceis de ler em informações claras e acessíveis com o NutriCam! Basta apontar a câmera para uma tabela nutricional e deixar o app fazer o resto.",
+        challenge: "Implementar o CoreML e treinar um modelo. A parte de integração com a câmera e a saída de dados foi complexa para garantir precisão.",
+        tags: ["CoreML", "VisionKit", "SwiftUI", "UIKit", "iOS"],
         codeLink: "#",
-        storeLink: "#",
+        storeLink: "https://apps.apple.com/br/app/nutricam/id6504928875?l=en-GBNutriCam",
         screenshots: [
             "assets/imagens/imageApps/nutricam/nutricam1.svg",
             "assets/imagens/imageApps/nutricam/nutricam2.svg",
@@ -59,28 +59,28 @@ const projectsData = [
         id: 3,
         title: "Spacetime",
         icon: "assets/imagens/icons/SpaceTimeIcon.svg",
-        desc: "Organize sua ToDo list com um app simples e eficiente, focado em produtividade e usabilidade, viage pelo espaço ao completar suas tarefas diárias.",
-        challenge: "Com um sistema de produtividade com LOCK de apps tivemos problemas com permissões, de modo que tentamos deixar o app confiavel e menos agressivo, com foco em animacoes suaves e usabilidade.",
-        tags: ["IOS", "swiftUI", "swiftData","Rive", "AVFoundation", "FamilyControls"],
+        desc: "Organize sua ToDo list com um app simples e eficiente, focado em produtividade e usabilidade, viaje pelo espaço ao completar suas tarefas diárias.",
+        challenge: "Com um sistema de produtividade com LOCK de apps tivemos problemas com permissões, foco em animações suaves e usabilidade.",
+        tags: ["iOS", "SwiftUI", "SwiftData", "Rive", "FamilyControls"],
         codeLink: "#",
         storeLink: "#",
-         screenshots: [
+        screenshots: [
             "assets/imagens/imageApps/spacetime/spacetime1.svg",
             "assets/imagens/imageApps/spacetime/spacetime2.png",
             "assets/imagens/imageApps/spacetime/spacetime3.png",
-            "assets/imagens/imageApps/spacetime/spacetime4.png",
+            "assets/imagens/imageApps/spacetime/spacetime4.png"
         ]
     },
     {
         id: 4,
         title: "LNE",
         icon: "assets/imagens/icons/LNEIcon.jpeg",
-        desc: "Projeto multiplataforma LNE é focado em accessibilidade, um jogo educativo de quimica para pessoa do ensino medio com deficiencia auditiva, o jogo consta integracao com Vlibras para auxiliar nos estudos.",
-        challenge: "meu maior desafio foi o regenciamento das view usando react, tive problemas com atualização de componentes, as vezes alguns estados ficavam travados, foi ai que pedi ajuda com um amigo e aprendi a redezirar componentes.",
-        tags: ["React", "TailwindCSS", "TypeScript", "HTML","Next","Vlibras", "Supabase", "Vercel", "IOS", "Flutter", "Dart"],
+        desc: "Projeto multiplataforma LNE é focado em acessibilidade, um jogo educativo de química para pessoas do ensino médio com deficiência auditiva, com integração Vlibras.",
+        challenge: "Gerenciamento das views usando React e problemas com atualização de componentes e renderização de estados.",
+        tags: ["React", "TypeScript", "Supabase", "Vlibras", "HTML", "iOS"],
         codeLink: "#",
         storeLink: "#",
-          screenshots: [
+        screenshots: [
             "assets/imagens/imageApps/LNE/lne1.PNG",
             "assets/imagens/imageApps/LNE/lne2.PNG",
             "assets/imagens/imageApps/LNE/lne3.PNG",
@@ -92,85 +92,128 @@ const projectsData = [
         id: 5,
         title: "Saporo",
         icon: "assets/imagens/icons/SaporoIcon.svg",
-        desc: "Aplicativo focado em IPAD sobre receitas culinarias com foco em facilidade de uso com a Siri, o intuito do app é facilitar na cozinha com instruções apartir da voz.",
-        challenge: "Tivemos problemas com a siri, onde algumas vezes ela nao reconhecia os comandos, tivemos que reavaliar a estrutura de intents e melhorar a comunicação entre app e siri.",
-        tags: ["SwiftUI", "IpadOS", "SiriKit", "APPIntents", "API REST", "iOS"],
+        desc: "Aplicativo focado em iPad sobre receitas culinárias com foco em facilidade de uso com a Siri.",
+        challenge: "Tivemos problemas com a Siri, onde algumas vezes ela não reconhecia os comandos, tivemos que reavaliar a estrutura de intents.",
+        tags: ["SwiftUI", "iPadOS", "SiriKit", "AppIntents", "API REST"],
         codeLink: "#",
         storeLink: "#",
         screenshots: [
             "assets/imagens/imageApps/saporo/saporo1.svg",
             "assets/imagens/imageApps/saporo/saporo2.svg",
-            "assets/imagens/imageApps/saporo/saporo3.svg",
+            "assets/imagens/imageApps/saporo/saporo3.svg"
         ]
     },
     {
         id: 6,
         title: "Marples",
         icon: "assets/imagens/icons/marples3d.png",
-        desc: "Aplicativo para VisionPro focado em distração de forma satisfatória, o usuario pode criar varias bolinhas e ficar rebatendo elas nas paredes da propia casa ou em outra bolinhas.",
-        challenge: "Manipulação de objetos 3D em um ambiente real, tivemos que estudar bastante o ARKit e RealityKit para conseguir uma boa experiencia, o maior desafio foi o reconheicmento de superficies, colisão, fisica de objetos e reconhimento da mão do usuario.",
+        desc: "Aplicativo para VisionPro focado em distração de forma satisfatória. Manipule bolinhas em realidade aumentada.",
+        challenge: "Manipulação de objetos 3D em um ambiente real, reconhecimento de superfícies, colisão e reconhecimento da mão do usuário.",
         tags: ["RealityKit", "VisionOS", "ARKit", "UIKit", "iOS"],
         codeLink: "#",
-        storeLink: "#", 
+        storeLink: "#",
         screenshots: [
             "assets/imagens/imageApps/marples/marples1.png",
             "assets/imagens/imageApps/marples/marples2.png",
-            "assets/imagens/imageApps/marples/marples3.png",
+            "assets/imagens/imageApps/marples/marples3.png"
         ]
     },
     {
         id: 7,
         title: "Bora!",
         icon: "assets/imagens/icons/logo-bora.svg",
-        desc: "Aplicativo focado em esportes, uma plataforma de social onde usuarios podem marcar jogos, encontrar parceiros e organizar campeonatos.",
-        challenge: "O mapa foi o maior desafio, onde tivemos que colocar pins manuais em varias localizações, e fazer um sistema de comunicação entre o organizador do campeonato e os participantes.",
+        desc: "Aplicativo focado em esportes, uma plataforma social onde usuários podem marcar jogos e campeonatos.",
+        challenge: "O mapa foi o maior desafio, pinagem manual em várias localizações e sistema de comunicação.",
         tags: ["MapKit", "SwiftUI", "iOS", "SwiftData"],
         codeLink: "#",
         storeLink: "#",
-         screenshots: [
+        screenshots: [
             "assets/imagens/imageApps/bora/bora1.svg",
             "assets/imagens/imageApps/bora/bora2.svg",
-            "assets/imagens/imageApps/bora/bora3.svg",
+            "assets/imagens/imageApps/bora/bora3.svg"
         ]
     },
     {
         id: 8,
         title: "TutorEasy",
         icon: "assets/imagens/icons/tutoreasy.png",
-        desc: "Aplicativo focado em ensinamentos gerais, uma plataforma onde pessoas postam videos ensinando diversos asunstos do dia a dia, seja trocar uma lampada ate fazer uma papelada para algo espeficico, tudo em videos curtos e diretos.",
-        challenge: "Ao decorrer do projeto ele poderia conter muitos videos postados, tivemos que pensar em um sistema que abrigase muitos dados, como e um projeto de estudo, optamos por tecnologias nativas, porem foi pensando em AWS ou Firebase.",
-        tags: ["API REST", "swiftUI", "iOS", "AVFoundation", "SwiftData"],
+        desc: "Plataforma de vídeos curtos ensinando diversos assuntos do dia a dia.",
+        challenge: "Pensar em um sistema que abrigasse muitos dados e vídeos, otimização de storage.",
+        tags: ["API REST", "SwiftUI", "iOS", "AVFoundation", "SwiftData"],
         codeLink: "#",
         storeLink: "#",
-         screenshots: [
+        screenshots: [
             "assets/imagens/imageApps/tutoreasy/tuto1.png",
             "assets/imagens/imageApps/tutoreasy/tuto2.png",
-            "assets/imagens/imageApps/tutoreasy/tuto3.png",
+            "assets/imagens/imageApps/tutoreasy/tuto3.png"
         ]
     }
 ];
 
+// 2. FUNÇÕES DE LÓGICA (UI)
+
+function createBentoMenu() {
+    const menuContainer = document.getElementById('bento-menu');
+    if (!menuContainer) return;
+
+    menuContainer.innerHTML = '';
+
+    projectsData.forEach((project, index) => {
+        const button = document.createElement('button');
+        button.className = `bento-item ${index === 0 ? 'active' : ''}`;
+        button.onclick = () => updateProject(index);
+
+        const img = document.createElement('img');
+        img.src = project.icon;
+        img.alt = project.title;
+        // Adiciona um fallback caso o ícone não carregue
+        img.onerror = function () { this.src = 'assets/imagens/icons/default.png'; };
+
+        const span = document.createElement('span');
+        span.innerText = project.title;
+
+        button.appendChild(img);
+        button.appendChild(span);
+        menuContainer.appendChild(button);
+    });
+}
+
 function updateProject(index) {
     const project = projectsData[index];
     const display = document.getElementById('project-display');
-    const gallery = document.querySelector('.display-gallery'); // Seleciona a galeria
+    const gallery = document.querySelector('.display-gallery');
 
-    // Efeito visual de troca
+    if (!display) return;
+
     display.classList.add('fade-out');
-
+   
     setTimeout(() => {
-        // Atualiza textos e ícones
         document.getElementById('p-icon').src = project.icon;
         document.getElementById('p-title').innerText = project.title;
         document.getElementById('p-desc').innerText = project.desc;
         document.getElementById('p-challenge').innerText = project.challenge;
-        document.getElementById('btn-code').href = project.codeLink;
-        document.getElementById('btn-link').href = project.storeLink;
 
-        // Atualiza Tags
+        // Atualiza botões
+        const btnCode = document.getElementById('btn-code');
+        const btnLink = document.getElementById('btn-link');
+
+        if (project.codeLink && project.codeLink !== "#") {
+            btnCode.href = project.codeLink;
+            btnCode.style.display = "flex";
+        } else {
+            btnCode.style.display = "none";
+        }
+
+        if (project.storeLink && project.storeLink !== "#") {
+            btnLink.href = project.storeLink;
+            btnLink.style.display = "flex";
+        } else {
+            btnLink.style.display = "none";
+        }
+
         const tagsContainer = document.getElementById('p-tags');
         tagsContainer.innerHTML = '';
-        if(project.tags) {
+        if (project.tags) {
             project.tags.forEach(tag => {
                 const span = document.createElement('span');
                 span.className = 'tag';
@@ -179,37 +222,133 @@ function updateProject(index) {
             });
         }
 
-        // --- ATUALIZA A GALERIA DE IMAGENS (NOVO) ---
-        gallery.innerHTML = ''; // Limpa as "telas placeholder" antigas
-
+        gallery.innerHTML = '';
         if (project.screenshots && project.screenshots.length > 0) {
             project.screenshots.forEach(src => {
                 const img = document.createElement('img');
                 img.src = src;
-                img.className = 'app-screen'; // Classe CSS para estilizar
+                img.className = 'app-screen';
                 img.alt = `Tela do ${project.title}`;
-                
-                // Adiciona proteção caso a imagem não carregue
-                img.onerror = function() { this.style.display = 'none'; }; 
-                
+                img.onerror = function () { this.style.display = 'none'; };
                 gallery.appendChild(img);
             });
         } else {
-            // Se não tiver imagens, avisa ou deixa vazio
             gallery.innerHTML = '<p style="color:#64748b; font-size:12px;">Sem pré-visualização disponível.</p>';
         }
 
-        // Atualiza classe Active no Menu
         const buttons = document.querySelectorAll('.bento-item');
         buttons.forEach(btn => btn.classList.remove('active'));
-        if(buttons[index]) buttons[index].classList.add('active');
+        if (buttons[index]) buttons[index].classList.add('active');
 
-        // Remove o efeito de fade
         display.classList.remove('fade-out');
+         setTimeout(() => { setupImageZoom(); }, 50);
     }, 300);
 }
 
-// Inicializa com o primeiro projeto ao carregar a página
+function renderFeaturedProjects() {
+    const container = document.getElementById('featured-container');
+    if (!container) return;
+    const idsDestaque = [0, 1, 4];
+
+    const featuredProjects = projectsData.filter(project => idsDestaque.includes(project.id));
+
+    container.innerHTML = '';
+
+    featuredProjects.forEach(project => {
+        const shortDesc = project.desc.length > 120
+            ? project.desc.substring(0, 120) + '...'
+            : project.desc;
+
+        const shortTags = project.tags.slice(0, 3).map(tag => `<span class="feat-tag">${tag}</span>`).join('');
+
+        const coverImage = project.screenshots && project.screenshots.length > 0
+            ? project.screenshots[0]
+            : project.icon;
+
+        const storeBtn = project.storeLink && project.storeLink !== '#'
+            ? `<a href="${project.storeLink}" target="_blank" class="btn-feat-primary"><i class="fab fa-app-store"></i> Baixar</a>`
+            : '';
+
+        const html = `
+            <div class="featured-card">
+                <div class="feat-header">
+                    <img src="${project.icon}" alt="${project.title}" class="feat-icon">
+                    <div class="feat-title-group">
+                        <h3>${project.title}</h3>
+                        <div class="feat-tags">${shortTags}</div>
+                    </div>
+                </div>
+                <p class="feat-desc">${shortDesc}</p>
+                <div class="feat-image-wrapper">
+                    <img src="${coverImage}" alt="Tela do App">
+                </div>
+                <div class="feat-footer">
+                    <button onclick="scrollToProject(${project.id})" class="btn-feat-outline">
+                        Ver Detalhes
+                    </button>
+                    ${storeBtn}
+                </div>
+            </div>
+        `;
+        container.innerHTML += html;
+    });
+    setupImageZoom();
+}
+
+function scrollToProject(id) {
+    const section = document.getElementById('projetos');
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        updateProject(id);
+    }
+}
+
+// 3. INICIALIZAÇÃO
 document.addEventListener('DOMContentLoaded', () => {
+    createBentoMenu();
+    renderFeaturedProjects();
     updateProject(0);
 });
+
+// ==========================================
+// 4. LÓGICA DO MODAL DE ZOOM (Lightbox)
+// ==========================================
+
+// Pega os elementos do modal
+const modal = document.getElementById("image-modal");
+const modalImg = document.getElementById("modal-image");
+const span = document.getElementsByClassName("close-modal")[0];
+
+// Função para abrir o modal com a imagem clicada
+function openModal(imgSrc) {
+    modal.style.display = "flex";
+    modalImg.src = imgSrc; // Usa o src da imagem clicada na imagem grande
+    // Desabilita o scroll da página de trás
+    document.body.style.overflow = 'hidden';
+}
+
+// Função para fechar o modal
+span.onclick = function () {
+    modal.style.display = "none";
+    // Habilita o scroll de volta
+    document.body.style.overflow = 'auto';
+}
+
+// Fecha se clicar fora da imagem (no fundo preto)
+modal.onclick = function (e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function setupImageZoom() {
+    // Seleciona todas as imagens de destaque e da galeria
+    const clickableImages = document.querySelectorAll('.feat-image-wrapper img, .app-screen');
+
+    clickableImages.forEach(img => {
+        img.onclick = function () {
+            openModal(this.src);
+        }
+    });
+}

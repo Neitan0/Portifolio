@@ -1,6 +1,4 @@
-/* ========================================= */
-/* 1. VARIÁVEIS E RESET                      */
-/* ========================================= */
+/* 1. VARIÁVEIS E RESET */
 :root {
   --bg-color: #0f172a;       /* Fundo da página (Slate 900) */
   --card-bg: #1e293b;        /* Fundo dos cards (Slate 800) */
@@ -28,9 +26,9 @@ body {
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
-/* ========================================= */
-/* 2. LAYOUT GERAL E HEADER                  */
-/* ========================================= */
+
+/* 2. LAYOUT GERAL E HEADER  */
+
 .container {
   max-width: 1000px;
   margin: auto;
@@ -43,7 +41,7 @@ ul { list-style: none; }
 header {
   background: #020617;
   padding: 20px 0;
-  position: sticky; /* Opcional: mantém o menu no topo */
+  position: sticky; 
   top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--border-color);
@@ -77,9 +75,9 @@ section h2 {
   font-size: 2rem;
 }
 
-/* ========================================= */
-/* 3. SEÇÃO SOBRE (HERO)                     */
-/* ========================================= */
+
+/* 3. SEÇÃO SOBRE (HERO) */
+
 .sobre {
   display: flex;
   align-items: center;
@@ -167,9 +165,38 @@ section h2 {
   color: var(--primary);
 }
 
-/* ========================================= */
-/* 4. EXPERIÊNCIA E SKILLS                   */
-/* ========================================= */
+/* BOTÃO DE CURRÍCULO (CV)   */
+.social-item.cv-highlight {
+    margin-bottom: 10px;
+    border: 1px solid var(--primary); 
+    background: rgba(56, 189, 248, 0.05); 
+    padding: 8px 8px; 
+    border-radius: 12px;
+    justify-content: center; 
+    font-weight: 50;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+
+.social-item.cv-highlight span,
+.social-item.cv-highlight i {
+    color: var(--primary);
+}
+
+.social-item.cv-highlight:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3); 
+}
+
+.social-item.cv-highlight:hover span,
+.social-item.cv-highlight:hover i {
+    color: #0f172a; 
+}
+
+
+/* 4. EXPERIÊNCIA E SKILLS */
+
 .experiencia-skills {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -177,7 +204,6 @@ section h2 {
   padding: 30px;
 }
 
-/* Timeline */
 .timeline h2 { margin-bottom: 30px; }
 
 .timeline-item {
@@ -187,7 +213,6 @@ section h2 {
   border-left: 2px solid #444;
 }
 
-/* Bolinha da timeline */
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -212,7 +237,6 @@ section h2 {
   color: var(--text-main);
 }
 
-/* Grid de Skills */
 .skills-area {
   display: flex;
   flex-direction: column;
@@ -242,14 +266,161 @@ section h2 {
   color: var(--primary);
   background: rgba(56, 189, 248, 0.1);
 }
-/* ========================================= */
-/* LAYOUT PROJETOS (BENTO + DETAIL)          */
-/* ========================================= */
 
-/* Container Principal (2 Colunas) */
+/* ========================= */
+/* SEÇÃO DESTAQUES (FEATURED) */
+/* ========================= */
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.featured-card {
+    background: var(--card-bg); /* Fundo escuro padrão */
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: var(--primary); /* Borda azul ao passar o mouse */
+}
+
+/* --- Cabeçalho (Icone + Titulo) --- */
+.feat-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.feat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.feat-title-group h3 {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+/* Tags pequenas */
+.feat-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.feat-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Descrição --- */
+.feat-desc {
+    font-size: 13px;
+    color: #cbd5f5;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    flex-grow: 0;
+}
+
+/* --- Imagem (Screenshot) --- */
+.feat-image-wrapper {
+    width: 100%;
+    height: 200px; /* Altura fixa para alinhar os cards */
+    background: #0f172a;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feat-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Preenche o espaço */
+    /* Se quiser ver o print inteiro sem cortar, troque cover por contain: */
+    /* object-fit: contain; */ 
+    transition: transform 0.5s ease;
+}
+
+.featured-card:hover .feat-image-wrapper img {
+    transform: scale(1.05); /* Zoom suave na imagem ao passar o mouse */
+}
+
+/* --- Botões do Rodapé --- */
+.feat-footer {
+    margin-top: auto; /* Empurra para o final do card */
+    display: flex;
+    gap: 10px;
+}
+
+.btn-feat-primary,
+.btn-feat-outline {
+    flex: 1; /* Ocupam o mesmo tamanho */
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Estilo Botão Baixar (Azul) */
+.btn-feat-primary {
+    background: var(--primary);
+    color: #0f172a;
+    border: 1px solid var(--primary);
+}
+
+.btn-feat-primary:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+
+/* Estilo Botão Detalhes (Transparente) */
+.btn-feat-outline {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid #334155;
+}
+
+.btn-feat-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-main);
+}
+
+/* LAYOUT PROJETOS (BENTO + DETAIL) */
 .projects-container {
     display: grid;
-    grid-template-columns: 280px 1fr; /* Coluna fixa na esq, resto na dir */
+    grid-template-columns: 280px 1fr; 
     gap: 30px;
     align-items: start;
 }
@@ -257,14 +428,14 @@ section h2 {
 /* --- COLUNA ESQUERDA: BENTO MENU (Ícones Flutuantes) --- */
 .bento-menu {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 por linha fica mais equilibrado agora */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     padding: 10px;
 }
 
 .bento-item {
-    background: transparent; /* Remove o fundo quadrado */
-    border: none;            /* Remove a borda quadrada */
+    background: transparent; 
+    border: none;            
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -272,48 +443,41 @@ section h2 {
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 0;
-    gap: 10px; /* Distância entre ícone e texto */
+    gap: 10px; 
 }
 
-/* O Ícone (Onde acontece a mágica 3D) */
 .bento-item img {
-    width: 64px;  /* Um pouco maior para destaque */
+    width: 64px;  
     height: 64px;
-    border-radius: 16px; /* Borda estilo Apple (Squircle) */
+    border-radius: 16px; 
     object-fit: cover;
     
-    /* Efeito 3D Minimalista */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação "Bouncy" */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
     
-    /* Garante que a imagem não fique distorcida */
     background-color: var(--card-bg); 
 }
 
-/* O Texto (Nome do App) */
 .bento-item span {
     font-size: 11px;
-    color: #64748b; /* Cinza discreto */
+    color: #64748b;
     font-weight: 500;
     text-align: center;
     transition: color 0.3s;
-    max-width: 80px; /* Evita que nomes longos quebrem o layout */
+    max-width: 80px; 
     line-height: 1.2;
 }
 
 /* --- ESTADOS DE INTERAÇÃO --- */
-
-/* Hover (Ao passar o mouse) */
 .bento-item:hover img {
-    transform: translateY(-6px) scale(1.05); /* Sobe e aumenta levemente */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra cresce (parece que levantou) */
+    transform: translateY(-6px) scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .bento-item:hover span {
     color: var(--text-main); 
 }
 
-/* Active (Item selecionado) */
 .bento-item.active img {
     box-shadow: 0 0 0 2px var(--primary), 0 10px 25px rgba(56, 189, 248, 0.4);
     transform: translateY(-3px);
@@ -333,7 +497,7 @@ section h2 {
     padding: 30px;
     min-height: 400px;
     position: relative;
-    /* Animação suave ao trocar */
+
     transition: opacity 0.3s ease;
 }
 
@@ -342,7 +506,6 @@ section h2 {
     pointer-events: none;
 }
 
-/* Header do Display */
 .display-header {
     display: flex;
     align-items: center;
@@ -362,7 +525,7 @@ section h2 {
     margin-bottom: 8px;
     color: var(--text-main);
 }
-/* Espaçamento das Tags no Painel de Detalhes */
+
 .header-info .tags {
     display: flex;       
     gap: 10px;          
@@ -377,7 +540,6 @@ section h2 {
     margin: 20px 0;
 }
 
-/* Corpo do Display */
 .info-block {
     margin-bottom: 25px;
 }
@@ -396,7 +558,6 @@ section h2 {
     line-height: 1.6;
 }
 
-/* GALERIA DE TELAS */
 .display-gallery {
     display: flex;
     gap: 15px;
@@ -405,15 +566,12 @@ section h2 {
     padding-bottom: 15px;  
     padding-top: 15px;
     
-    /* Scroll suave */
     scroll-behavior: smooth;
     
-    /* Esconder scrollbar no Chrome/Safari (opcional, fica mais limpo) */
     scrollbar-width: thin;
     scrollbar-color: var(--border-color) transparent;
 }
 
-/* A IMAGEM DO PRINT (Celular) */
 .app-screen {
     height: 180px;         
     width: auto;            
@@ -429,10 +587,58 @@ section h2 {
     border-color: var(--primary);
 }
 
-/* Botões do Display */
 .display-actions {
     display: flex;
     gap: 15px;
+}
+/* ========================================= */
+/* BOTÕES DO DISPLAY (MINIMALISTAS)          */
+/* ========================================= */
+
+.display-actions {
+    display: flex;
+    gap: 15px; /* Espaço entre os botões */
+    margin-top: 25px; /* Separa da galeria */
+}
+
+/* Estilo Base para ambos os botões */
+.display-actions .btn-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Distância entre ícone e texto */
+    padding: 10px 24px; /* Tamanho confortável */
+    border-radius: 99px; /* Borda redonda (Pill shape) estilo Apple */
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* Botão SECUNDÁRIO (Code/GitHub) - Apenas borda */
+#btn-code {
+    background: transparent;
+    border: 1px solid #334155; /* Borda cinza sutil */
+    color: #94a3b8; /* Texto cinza */
+}
+
+#btn-code:hover {
+    border-color: var(--text-main); /* Fica branco ao passar o mouse */
+    color: var(--text-main);
+}
+
+/* Botão PRIMÁRIO (Baixar/AppStore) - Sólido e Destacado */
+#btn-link {
+    background: var(--primary); /* Azul do seu tema */
+    border: 1px solid var(--primary);
+    color: #0f172a; /* Texto escuro para contraste no azul */
+}
+
+#btn-link:hover {
+    background: var(--primary-hover, #7dd3fc); /* Clareia levemente */
+    border-color: var(--primary-hover, #7dd3fc);
+    transform: translateY(-2px); /* Sobe um pouquinho */
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3); /* Brilho suave */
 }
 
 /* RESPONSIVIDADE */
@@ -446,10 +652,164 @@ section h2 {
         margin-bottom: 20px;
     }
 }
+/* MODAL DE ZOOM (LIGHTBOX)  */
 
-/* ========================================= */
-/* 6. RODAPÉ                                 */
-/* ========================================= */
+/* O fundo preto transparente */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    z-index: 9999; 
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); 
+    backdrop-filter: blur(5px); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 85vh; 
+    object-fit: contain; 
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease; 
+}
+
+/* Botão de fechar (X) */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: var(--primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animação de Zoom */
+@keyframes zoomIn {
+    from {transform:scale(0.8); opacity: 0;}
+    to {transform:scale(1); opacity: 1;}
+}
+
+/* Indica que as imagens pequenas são clicáveis */
+.app-screen,
+.feat-image-wrapper img {
+    cursor: zoom-in;
+}
+
+/* SEÇÃO VOLUNTARIADO        */
+
+.volunteer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.vol-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.vol-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary); /* Borda azul ao passar o mouse */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Cabeçalho do Card (Ícone + Título) --- */
+.vol-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 20px;
+}
+
+.vol-icon-box {
+    width: 50px;
+    height: 50px;
+    background: rgba(56, 189, 248, 0.1); /* Fundo azul transparente */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.vol-title h3 {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.vol-role {
+    font-size: 0.9rem;
+    color: var(--primary); /* Cargo em destaque */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Lista de Atividades --- */
+.vol-list {
+    list-style: none; /* Remove bolinhas padrão feias */
+    padding: 0;
+    margin: 0;
+}
+
+.vol-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: var(--text-muted); /* Cinza claro */
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Cria o marcador personalizado (tracinho ou seta) */
+.vol-list li::before {
+    content: "▹"; /* Seta minimalista */
+    position: absolute;
+    left: 0;
+    color: var(--primary); /* Seta azul */
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .vol-header {
+        flex-direction: column; /* No celular, ícone fica acima do texto */
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+/* 6. RODAPÉ */
 footer {
   background: #020617;
   text-align: center;
@@ -460,9 +820,7 @@ footer {
   margin-top: 60px;
 }
 
-/* ========================================= */
-/* 7. RESPONSIVIDADE (MOBILE)                */
-/* ========================================= */
+/* 7. RESPONSIVIDADE (MOBILE)*/
 @media (max-width: 900px) {
   .experiencia-skills {
     grid-template-columns: 1fr;
@@ -480,6 +838,6 @@ footer {
   }
   
   .social {
-    align-items: center; /* Centraliza ícones no mobile */
+    align-items: center; 
   }
 }
