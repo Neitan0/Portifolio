@@ -841,3 +841,112 @@ footer {
     align-items: center; 
   }
 }
+/* ========================================= */
+/* RESPONSIVIDADE (MOBILE & TABLET)          */
+/* ========================================= */
+
+@media (max-width: 900px) {
+    
+    /* 1. AJUSTE GERAL (Evita rolagem horizontal da página toda) */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container, section {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    }
+
+    /* 2. HEADER E MENU */
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 3. EXPERIÊNCIA E SKILLS (Resolvendo o "colado na lateral") */
+    .experiencia-skills {
+        grid-template-columns: 1fr; /* Empilha */
+        padding: 30px 25px; /* Aumentei o padding lateral aqui! */
+        gap: 40px;
+        width: 100%;
+    }
+
+    .timeline-item {
+        margin-left: 5px; /* Dá um respiro extra para a linha */
+        padding-right: 10px; /* Garante que o texto não cole na direita */
+    }
+
+    /* 4. PROJETOS (Resolvendo o overflow da tela) */
+    .projects-container {
+        grid-template-columns: 1fr; /* Remove as colunas lado a lado */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    /* Menu de ícones (Scroll Horizontal) */
+    .bento-menu {
+        width: 100%;
+        display: flex;
+        overflow-x: auto; /* Scroll lateral suave */
+        padding-bottom: 10px;
+        gap: 15px;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch; /* Melhora o scroll no iPhone */
+    }
+
+    .bento-item {
+        min-width: 70px; /* Tamanho fixo para não esmagar */
+        flex-shrink: 0;  /* Impede que o ícone diminua */
+    }
+
+    /* O Painel de Detalhes (O que estava estourando) */
+    .project-display {
+        width: 100%; /* Força a caber na tela */
+        min-width: 0; /* Remove travas de largura mínima */
+        padding: 20px; /* Padding interno seguro */
+        margin: 0;
+        box-sizing: border-box; /* Essencial! */
+        overflow: hidden; /* Corta qualquer coisa que tente sair */
+    }
+
+    .display-header {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Galeria de imagens dentro do projeto */
+    .display-gallery {
+        width: 100%;
+        padding-bottom: 15px;
+        /* As imagens rolam DENTRO da caixa, não a página toda */
+        overflow-x: auto; 
+    }
+
+    .app-screen {
+        height: 180px; /* Altura segura para mobile */
+    }
+
+    /* 5. VOLUNTARIADO E DESTAQUES */
+    .volunteer-grid, 
+    .featured-grid {
+        grid-template-columns: 1fr; /* 1 card por vez */
+        width: 100%;
+    }
+
+    .vol-card, .featured-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
