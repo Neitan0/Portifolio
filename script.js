@@ -12,12 +12,12 @@ const projectsData = [
         codeLink: "",
         storeLink: "https://apps.apple.com/br/app/skedou/id6754465958?l=en-GBSkedou",
         screenshots: [
-            "assets/imagens/imageApps/skedou/skedou1.svg",
-            "assets/imagens/imageApps/skedou/skedou2.svg",
-            "assets/imagens/imageApps/skedou/skedou3.svg",
-            "assets/imagens/imageApps/skedou/skedou4.svg",
-            "assets/imagens/imageApps/skedou/skedou5.svg",
-            "assets/imagens/imageApps/skedou/skedou6.svg"
+            "assets/imagens/imageApps/skedou/skedou1.png",
+            "assets/imagens/imageApps/skedou/skedou2.png",
+            "assets/imagens/imageApps/skedou/skedou3.png",
+            "assets/imagens/imageApps/skedou/skedou4.png",
+            "assets/imagens/imageApps/skedou/skedou5.png",
+            "assets/imagens/imageApps/skedou/skedou6.png"
         ]
     },
     {
@@ -44,15 +44,15 @@ const projectsData = [
         icon: "assets/imagens/icons/nutricamIcon.svg",
         desc: "Transforme tabelas difíceis de ler em informações claras e acessíveis com o NutriCam! Basta apontar a câmera para uma tabela nutricional e deixar o app fazer o resto.",
         challenge: "Implementar o CoreML e treinar um modelo. A parte de integração com a câmera e a saída de dados foi complexa para garantir precisão.",
-        tags: ["CoreML", "VisionKit", "SwiftUI", "UIKit", "iOS"],
+        tags: ["iOS", "VisionKit", "SwiftUI", "UIKit", "CoreML"],
         codeLink: "#",
         storeLink: "https://apps.apple.com/br/app/nutricam/id6504928875?l=en-GBNutriCam",
         screenshots: [
-            "assets/imagens/imageApps/nutricam/nutricam1.svg",
-            "assets/imagens/imageApps/nutricam/nutricam2.svg",
-            "assets/imagens/imageApps/nutricam/nutricam3.svg",
-            "assets/imagens/imageApps/nutricam/nutricam4.svg",
-            "assets/imagens/imageApps/nutricam/nutricam5.svg"
+            "assets/imagens/imageApps/nutricam/nutricam1.png",
+            "assets/imagens/imageApps/nutricam/nutricam2.png",
+            "assets/imagens/imageApps/nutricam/nutricam3.png",
+            "assets/imagens/imageApps/nutricam/nutricam4.png",
+            "assets/imagens/imageApps/nutricam/nutricam5.png"
         ]
     },
     {
@@ -77,7 +77,7 @@ const projectsData = [
         icon: "assets/imagens/icons/LNEIcon.jpeg",
         desc: "Projeto multiplataforma LNE é focado em acessibilidade, um jogo educativo de química para pessoas do ensino médio com deficiência auditiva, com integração Vlibras.",
         challenge: "Gerenciamento das views usando React e problemas com atualização de componentes e renderização de estados.",
-        tags: ["React", "TypeScript", "Supabase", "Vlibras", "HTML", "iOS"],
+        tags: ["Web","Mobile","Supabase","React", "TypeScript",  "Vlibras", "HTML", "iOS"],
         codeLink: "#",
         storeLink: "#",
         screenshots: [
